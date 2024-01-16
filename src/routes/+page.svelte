@@ -10,11 +10,6 @@
     
     
     <div class="grid grid-cols-4">
-        {#if $isLoading}
-                <div class="w-full h-[100vh] flex justify-center align-center">
-                    Loading..
-                </div>
-        {/if}
         <div class="col-span-3"> 
             {#key $page}
                 {#key $type}
