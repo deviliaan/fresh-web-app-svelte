@@ -3,7 +3,7 @@
     export let anime;
 </script>
 
-<a href="#" class="relative w-[100%] border border-[black] pb-2 hover:curosor-pointer">
+<a href="/content/anime/{anime.episodeId.split('-episode-')[0]}" class="relative w-[100%] border border-[black] pb-2 hover:curosor-pointer">
     <img class="object-cover h-[92%]" src="{anime.animeImg}" alt="{anime.animeTitle}" srcset="">
     <div class="w-full h-10">
         <h2 class="pl-2 text-white font-bold truncate">{anime.animeTitle}</h2>
