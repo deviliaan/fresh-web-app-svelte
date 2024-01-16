@@ -10,7 +10,12 @@
     
     
     <div class="grid grid-cols-4">
-        <div class="col-span-3 flex flex-col"> 
+        <div class="col-span-4 md:col-span-3 flex flex-col">
+            {#if $isLoading}
+                <div class="w-full h-[100vh] flex justify-center mt-8">
+                    Loading...
+                </div>
+            {/if} 
             {#key $page}
                 {#key $type}
                     <Content />
@@ -19,7 +24,7 @@
             {/key}
                     
         </div>
-        <div class="sm:hidden md:block mt-2 mr-2">
+        <div class="sm:hidden hidden md:block mt-2 mr-2">
             <RightBar />
         </div>
     </div>            
