@@ -2,8 +2,23 @@
 
 </script>
 
-<nav class="bg-slate-800 h-16 w-full">
-    <div class="flex justify-center h-full align-middle">
-        <img src="https://picsum.photos/200" alt="Logo">
+<nav class="bg-slate-800 p-4">
+    <div class="container mx:auto flex justify-between items-center">
+        <a href="#" class="text-white font-bold text-lg">
+            <img src="https://picsum.photos/200" class="w-10 h-10 rounded-full" alt="" srcset="">
+        </a>
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-300 uppercase">Subbed</a>
+            <a href="#" class="text-white hover:text-gray-300 uppercase">Dubbed</a>
+            <a href="#" class="text-white hover:text-gray-300 uppercase">Chinese</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-76h7"></path>
+                </svg>
+            </button>
+        </div>
     </div>
 </nav>
