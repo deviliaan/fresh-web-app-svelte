@@ -32,8 +32,8 @@ const handleDub =()=>{
 
 <nav class="bg-slate-800 p-4">
     <div class="mx:auto flex items-center">
-        <button class="text-white font-bold text-lg">
-            <img src="https://picsum.photos/200" class="w-10 h-10 rounded-full" alt="" srcset="">
+        <button class="text-white font-bold text-lg hover:cursor-pointer">
+            <img src="/logo.png" class="h-10" alt="Logo" srcset="">
         </button>
         <div class="hidden md:flex space-x-4 ml-auto">
             <button on:click={handleSub} class="text-white hover:text-gray-300 uppercase">Subbed</button>
