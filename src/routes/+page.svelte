@@ -7,14 +7,15 @@
 </script>
 
 <div id="content" class="bg-slate-600 flex flex-col"> 
-    {#if $isLoading}
-        <div class="w-full h-[100vh]">
-            Loading..
-        </div>
-    {/if}
+    
     
     <div class="grid grid-cols-4">
-        <div class="col-span-3">
+        {#if $isLoading}
+                <div class="w-full h-[100vh] flex justify-center align-center">
+                    Loading..
+                </div>
+        {/if}
+        <div class="col-span-3"> 
             {#key $page}
                 {#key $type}
                     <Content />

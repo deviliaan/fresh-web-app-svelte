@@ -18,7 +18,7 @@
         </div>
     {/if}
     {#if anime.subOrDub}
-        <div class="absolute right-0 bottom-[10%]">
+        <div class="absolute right-0 bottom-[12%]">
             <span class="bg-orange-300 px-2 mx-1 rounded-xl">{anime.subOrDub}</span>
         </div>
     {/if}
