@@ -48,7 +48,7 @@ const handleDub =()=>{
         </div>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 w-full flex flex-col">
+    <div id="mobile-menu" class="hidden md:hidden mt-4 w-full sm:flex flex-col">
         <button on:click={handleSub} class="block text-white py-2 px-4 hover:bg-slate-600 rounded-lg uppercase">Subbed</button>
         <button on:click={handleDub} class="block text-white py-2 px-4 hover:bg-slate-600 rounded-lg uppercase">Dubbed</button>
         <button on:click={hadnleChinese} class="block text-white py-2 px-4 
