@@ -32,13 +32,13 @@ const handleDub =()=>{
 
 <nav class="bg-slate-800 p-4">
     <div class="container mx:auto flex justify-between items-center">
-        <a href="#" class="text-white font-bold text-lg">
+        <button class="text-white font-bold text-lg">
             <img src="https://picsum.photos/200" class="w-10 h-10 rounded-full" alt="" srcset="">
-        </a>
+        </button>
         <div class="hidden md:flex space-x-4">
-            <a href="#" class="text-white hover:text-gray-300 uppercase">Subbed</a>
-            <a href="#" class="text-white hover:text-gray-300 uppercase">Dubbed</a>
-            <a href="#" class="text-white hover:text-gray-300 uppercase">Chinese</a>
+            <button on:click={handleSub} class="text-white hover:text-gray-300 uppercase">Subbed</button>
+            <button on:click={handleDub} class="text-white hover:text-gray-300 uppercase">Dubbed</button>
+            <button on:click={hadnleChinese} class="text-white hover:text-gray-300 uppercase">Chinese</button>
         </div>
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
