@@ -14,7 +14,7 @@
     })
 </script>
 
-<div id="content" class="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-6 mt-2 gap-2 px-2">
+<div id="content" class="grid grid-cols-2 md:grid-cols-5 sm:grid-cols-3 lg:grid-cols-6 mt-2 gap-2 px-2">
     {#key animes}
         {#each animes as anime}
             <Card anime={anime}/>

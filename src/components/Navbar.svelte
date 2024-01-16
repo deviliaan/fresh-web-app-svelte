@@ -31,11 +31,11 @@ const handleDub =()=>{
 </script>
 
 <nav class="bg-slate-800 p-4">
-    <div class="container mx:auto flex justify-between items-center">
+    <div class="mx:auto flex items-center">
         <button class="text-white font-bold text-lg">
             <img src="https://picsum.photos/200" class="w-10 h-10 rounded-full" alt="" srcset="">
         </button>
-        <div class="hidden md:flex space-x-4">
+        <div class="hidden md:flex space-x-4 ml-auto">
             <button on:click={handleSub} class="text-white hover:text-gray-300 uppercase">Subbed</button>
             <button on:click={handleDub} class="text-white hover:text-gray-300 uppercase">Dubbed</button>
             <button on:click={hadnleChinese} class="text-white hover:text-gray-300 uppercase">Chinese</button>
