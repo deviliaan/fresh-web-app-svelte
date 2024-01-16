@@ -1,5 +1,11 @@
 <script>
 
+
+const handleClick =()=>{
+    let mobileMenu = document.getElementById('mobile-menu')
+    mobileMenu?.classList.toggle('hidden')
+}
+
 </script>
 
 <nav class="bg-slate-800 p-4">
@@ -14,11 +20,17 @@
         </div>
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-            <button id="mobile-menu-btn" class="text-white">
+            <button on:click={handleClick} class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-76h7"></path>
                 </svg>
             </button>
         </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="#" class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Subbed</a>
+        <a href="#" class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Dubbed</a>
+        <a href="#" class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Chinese</a>
     </div>
 </nav>
