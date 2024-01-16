@@ -41,11 +41,9 @@ const handleDub =()=>{
             <button on:click={hadnleChinese} class="text-white hover:text-gray-300 uppercase">Chinese</button>
         </div>
         <!-- Mobile Menu Button -->
-        <div class="md:hidden">
+        <div class="md:hidden ml-auto pr-2">
             <button on:click={handleClick} class="text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-76h7"></path>
-                </svg>
+                CLick Me
             </button>
         </div>
     </div>
