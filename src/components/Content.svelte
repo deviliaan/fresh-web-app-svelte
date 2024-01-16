@@ -1,14 +1,16 @@
 <script>
     // @ts-nocheck
-    import { api_end,page,type } from "$lib/store";
+    import { api_end,page,type,isLoading } from "$lib/store";
     import axios from "axios";
     import { onMount } from "svelte";
     import Card from "./Card.svelte";
 
     $: animes = []
     onMount(async ()=> {
+        $isLoading = true;
         const res = await axios.get(`${$api_end}/recent-release?page=${$page}&type=${$type}`)
         animes = res.data;
+        $isLoading = false;
     })
 </script>
 
