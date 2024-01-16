@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import {episode} from '$lib/store.js'
     export let data;
+    import Player from '../../../../components/Player.svelte'
     const {anime,id} = data;
 
     onMount(()=>{
@@ -24,8 +25,9 @@
         </div>  
     </div>
     <!-- player -->
-    
-
+    {#key $episode}
+        <Player episode={$episode} id={id}/>
+    {/key}
 
 
     <div class="flex gap-2 pt-2 px-2 justify-between">
