@@ -4,7 +4,7 @@
 </script>
 
 <section>
-    <div class="">
+    <div class="h-[100vh]">
         <Navbar />
         <slot />
     </div>

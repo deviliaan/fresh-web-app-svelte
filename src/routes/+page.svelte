@@ -10,7 +10,7 @@
     
     
     <div class="grid grid-cols-4">
-        <div class="col-span-3"> 
+        <div class="col-span-3 flex flex-col"> 
             {#key $page}
                 {#key $type}
                     <Content />
