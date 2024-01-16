@@ -43,14 +43,15 @@ const handleDub =()=>{
         <!-- Mobile Menu Button -->
         <div class="md:hidden ml-auto pr-2">
             <button on:click={handleClick} class="text-white">
-                CLick Me
+                <span class="material-icons md-48">tune</span>
             </button>
         </div>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4">
-        <button on:click={handleSub} class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Subbed</button>
-        <button on:click={handleDub} class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Dubbed</button>
-        <button on:click={hadnleChinese} class="block text-white py-2 px-4 border-b border-gray-300 uppercase">Chinese</button>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 w-full flex flex-col">
+        <button on:click={handleSub} class="block text-white py-2 px-4 hover:bg-slate-600 rounded-lg uppercase">Subbed</button>
+        <button on:click={handleDub} class="block text-white py-2 px-4 hover:bg-slate-600 rounded-lg uppercase">Dubbed</button>
+        <button on:click={hadnleChinese} class="block text-white py-2 px-4 
+        hover:bg-slate-600 rounded-lg uppercase">Chinese</button>
     </div>
 </nav>
