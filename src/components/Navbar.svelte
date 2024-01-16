@@ -1,5 +1,7 @@
 <script>
-import {type,page} from '$lib/store';
+    // @ts-nocheck
+
+import {type,page,currentUrl} from '$lib/store';
 
 const handleClick =()=>{
     let mobileMenu = document.getElementById('mobile-menu')
@@ -8,14 +10,23 @@ const handleClick =()=>{
 const hadnleChinese =()=> {
     type.set(3)
     page.set(1)
+    if($currentUrl == 'episode'){
+        location.href = '/'
+    }
 }
 const handleSub =()=>{
     type.set(1)
     page.set(1)
+    if($currentUrl == 'episode'){
+        window.location.href = '/'
+    }
 }
 const handleDub =()=>{
     type.set(2)
     page.set(1)
+    if($currentUrl == 'episode'){
+        location.href = '/'
+    }
 }
 </script>
 

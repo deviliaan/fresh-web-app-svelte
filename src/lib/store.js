@@ -5,3 +5,4 @@ export const page = writable(1);
 export const type = writable(1);
 export const episode = writable(1);
 export const isLoading = writable(false);
+export const currentUrl = writable('Anime');

@@ -20,7 +20,8 @@
 
         </div>
     {:else}
-        <iframe src="{embed.file}" frameborder="0"></iframe>
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <iframe src="{embed.file}" frameborder="0" sandbox="allow-forms allow-modals" allow="geolocation"></iframe>
     {/if}
     
 </div>

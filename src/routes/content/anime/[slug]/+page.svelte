@@ -1,13 +1,14 @@
 <script>
     // @ts-nocheck
     import { onMount } from 'svelte';
-    import {episode} from '$lib/store.js'
+    import {episode,currentUrl} from '$lib/store.js'
     export let data;
     import Player from '../../../../components/Player.svelte'
     const {anime,id} = data;
 
     onMount(()=>{
         $episode = anime.episodesList.length;
+        currentUrl.set('episode')
     })
 </script>
 

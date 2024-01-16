@@ -10,14 +10,12 @@
         <div class="w-full h-[100vh] flex items-center justify-center">
             Loading..
         </div>
-    {:else}
-        {#key $page}
-            {#key $type}
-                <Content />
-                <Pgainator />
-            {/key}
-            
-        {/key}
     {/if}
-    
+    {#key $page}
+        {#key $type}
+            <Content />
+            <Pgainator />
+        {/key}
+            
+    {/key}
 </div>
