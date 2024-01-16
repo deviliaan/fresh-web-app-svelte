@@ -17,7 +17,7 @@
     <div class="bg-orange-300 w-full h-6">
         <p class="uppercase pl-2">popular</p>
     </div>
-    <div class="grid hidden sm:hidden md:grid-cols-2 gap-1 pt-2 px-2">
+    <div class="grid sm:hidden md:grid-cols-2 gap-1 pt-2 px-2">
         
         {#each animes as anime}
             <Card anime={anime}/>
