@@ -4,6 +4,7 @@
     import axios from "axios";
     import { onMount } from "svelte";
     export let episode,id;
+    import VideoPlayer from 'svelte-video-player';
 
     $: embed = '';
     onMount(async ()=>{
@@ -16,12 +17,14 @@
 
 <div class="flex justify-center pt-2 ">
     {#if $isLoading}
-        <div class="bg-slate-600 w-[90%] h-32">
+        <div class="bg-slate-600 w-[80%] h-32">
 
         </div>
     {:else}
-        <!-- svelte-ignore a11y-missing-attribute -->
-        <iframe src="{embed.file}" allowfullscreen frameborder="0" sandbox="allow-forms allow-modals" allow="geolocation"></iframe>
+        <div class="w-[80%]">
+            <VideoPlayer source={embed.file}/>
+        </div>
+        
     {/if}
     
 </div>
