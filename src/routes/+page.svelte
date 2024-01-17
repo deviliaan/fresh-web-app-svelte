@@ -4,13 +4,13 @@
 	import RightBar from './../components/RightBar.svelte';
     import Content from '../components/Content.svelte'
     import Pgainator from '../components/Pgainator.svelte';
-    import {page, type, isLoading} from '$lib/store';
+    import { isLoading} from '$lib/store';
     
 </script>
 
 <div id="content" class="bg-slate-600 flex flex-col"> 
     
-    
+    {data.type}
     <div class="grid grid-cols-4">
         <div class="col-span-4 md:col-span-3 flex flex-col">
             {#if $isLoading}

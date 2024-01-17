@@ -1,6 +1,6 @@
 <script>
     // @ts-nocheck
-    import { api_end,page,type,isLoading } from "$lib/store";
+    import { isLoading } from "$lib/store";
     import { onMount } from "svelte";
     import Card from "./Card.svelte";
 
