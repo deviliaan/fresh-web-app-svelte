@@ -8,7 +8,7 @@
     
 </script>
 
-<div id="content" class="bg-slate-600 flex flex-col"> 
+<div id="content" class="flex flex-col"> 
     
     <div class="grid grid-cols-4">
         <div class="col-span-4 md:col-span-3 flex flex-col">
@@ -18,7 +18,7 @@
                 </div>
             {/if} 
             {#key data.animes}
-                <Content animes={data.animes}/>
+                <Content animes={data.animes} type={data.type}/>
             {/key}
             <Pgainator type={data.type} page={parseInt(data.currentPage)}/>
         </div>

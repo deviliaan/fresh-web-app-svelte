@@ -1,24 +1,17 @@
 <script>
     //@ts-nocheck
-    export let anime;
-    import {type} from '$lib/store'
+    export let anime,type;
     import {useLazyImage as lazyImage} from "svelte-lazy-image";
     
 </script>
 
-<a href="/content/anime/{anime.id}" class="relative w-[100%] border border-[black] pb-2 hover:curosor-pointer">
-    <img class="object-cover h-[92%]" use:lazyImage data-src="{anime.image}" alt="{anime.title}" srcset="">
-    <div class="w-full h-10">
-        <h2 class="pl-2 text-white font-bold truncate">{anime.title}</h2>
+<a href="#" class="flex w-auto flex-col bg-base-100 shadow-xl">
+    <img class="w-full object-cover h-[90%]" src="{anime.image}" alt="" srcset="">
+    <div class="w-full">
+        <p class="truncate pl-2">{anime.title}</p>
+        <div class="flex flex-wrap gap-1 p-3">
+            <div class="badge badge-accent">Episode {anime.episodeNumber}</div>
+            <div class="badge badge-warning">{type == 1? 'SUB': type ==2? 'DUB': 'ONA'}</div>
+        </div>
     </div>
-    {#if anime.episodeNumber}
-        <div class="absolute top-0 left-0">
-            <span class="bg-orange-300 px-2 mx-1 rounded-xl">Episode {anime.episodeNumber}</span>
-        </div>
-    {/if}
-    {#if $type }
-        <div class="absolute right-0 bottom-[12%]">
-            <span class="bg-orange-300 px-2 mx-1 rounded-xl">{$type == 1? 'sub': $type == 2? 'dub': 'ona'}</span>
-        </div>
-    {/if}
 </a>
