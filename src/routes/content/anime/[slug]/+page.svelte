@@ -15,7 +15,6 @@
 <div class="">
     <div id="info" class="pl-2 pt-2">
         <h1>Title: {anime.animeTitle}</h1>
-        
         <h1>Type: <span>{anime.type}</span></h1>
         <h1>Year: <span>{anime.releasedDate}</span></h1>
         <h1>Episode: {$episode}</h1>

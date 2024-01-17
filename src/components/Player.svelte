@@ -17,16 +17,20 @@
 </script>
 
 <div class="flex justify-center items-center pt-2 flex-col">
-    {JSON.stringify(embed[0].file)}
+    
     {#if $isLoading}
         <div class="bg-slate-600 w-[80%] h-32">
             
         </div>
     {:else}
         <div class="w-[80%]">
-            
+            <!-- svelte-ignore a11y-media-has-caption -->
+            <video class="video-js" controls preload="auto">
+                {#each embed as video}
+                    <source src="{video.file}" type="video/mp4">
+                {/each}
+            </video>
         </div>
-        
     {/if}
     
 </div>
