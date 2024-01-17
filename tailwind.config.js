@@ -5,5 +5,12 @@ export default {
     extend: {},
   },
   plugins: [require('daisyui')],
+  daisyui: {
+    themes: false,
+    darkTheme: "dark",
+    base: true,
+    styled: true,
+    
+  }
 }
 
