@@ -1,4 +1,5 @@
 <script>
+    export let data;
 	import RightBar from './../components/RightBar.svelte';
     import Content from '../components/Content.svelte'
     import Pgainator from '../components/Pgainator.svelte';
@@ -16,9 +17,11 @@
                     Loading...
                 </div>
             {/if} 
+            {JSON.stringify(data.animes)}
+            <Content />
             {#key $page}
                 {#key $type}
-                    <Content />
+                    
                     <Pgainator />
                 {/key}
             {/key}
