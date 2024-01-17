@@ -10,7 +10,6 @@
 
 <div id="content" class="bg-slate-600 flex flex-col"> 
     
-    {data.type}
     <div class="grid grid-cols-4">
         <div class="col-span-4 md:col-span-3 flex flex-col">
             {#if $isLoading}
@@ -21,7 +20,7 @@
             {#key data.animes}
                 <Content animes={data.animes}/>
             {/key}
-            <Pgainator page={parseInt(data.currentPage)}/>
+            <Pgainator type={data.type} page={parseInt(data.currentPage)}/>
         </div>
         <div class="sm:hidden hidden md:block mt-2 mr-2">
             <RightBar />
