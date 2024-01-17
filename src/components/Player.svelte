@@ -4,37 +4,14 @@
     import axios from "axios";
     import { onMount } from "svelte";
     export let episode,id;
-
-    let isPlaying = false;
-    let selectedQuality = 0
-    const qualityOptions = [0,1,2]    
-    $: embed = '';
-    $: sources = [];
-    const togglePlay=()=>{
-        isPlaying = !isPlaying;
-        const video = document.getElementById('v-player');
-        if(isPlaying){
-            video.play
-        }else{
-            video.pause()
-        }
-    }
-    function changeQuality(newQuality) {
-        selectedQuality = newQuality;
-        const video = document.getElementById('v-player');
-        const currentPlaybackTime = video.currentTime;
-        video.src = getVideoSource();
-        video.load();
-        video.currentTime = currentPlaybackTime;
-        video.play()
-    }
-    function getVideoSource() {
-        return embed[selectedQuality]
-    }
+ 
+    $: embed = [];
+    
+    
     onMount(async ()=>{
         $isLoading = true;
         const res = await axios.get(`${$api_end}/vidcdn/watch/${id}-episode-${episode}`)
-        embed = res.data;
+        embed = res.data.sources;
         $isLoading = false;
         
     })
@@ -47,8 +24,12 @@
             
         </div>
     {:else}
-        <div class="w-[80%]">
-            
+        <div class="w-[80%] flex justify-center">
+            <!-- Later to be decided -->
+            <video controls>
+                <source src={embed[0]?.file} track={embed[0]?.file}>
+                <track kind="captions">
+            </video>
         </div>
     {/if}
     
