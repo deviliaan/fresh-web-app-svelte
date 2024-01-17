@@ -17,15 +17,8 @@
                     Loading...
                 </div>
             {/if} 
-            {JSON.stringify(data.animes)}
-            <Content />
-            {#key $page}
-                {#key $type}
-                    
-                    <Pgainator />
-                {/key}
-            {/key}
-                    
+            <Content animes={data.animes}/>
+            <Pgainator />
         </div>
         <div class="sm:hidden hidden md:block mt-2 mr-2">
             <RightBar />
