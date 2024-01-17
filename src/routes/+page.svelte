@@ -1,4 +1,5 @@
 <script>
+    // @ts-nocheck
     export let data;
 	import RightBar from './../components/RightBar.svelte';
     import Content from '../components/Content.svelte'
@@ -17,8 +18,10 @@
                     Loading...
                 </div>
             {/if} 
-            <Content animes={data.animes}/>
-            <Pgainator page={data.currentPage}/>
+            {#key data.animes}
+                <Content animes={data.animes}/>
+            {/key}
+            <Pgainator page={parseInt(data.currentPage)}/>
         </div>
         <div class="sm:hidden hidden md:block mt-2 mr-2">
             <RightBar />

@@ -12,6 +12,6 @@
         <a href="/?page={page - 1}&type={$type}" class="bg-orange-300 font-bold rounded-lg px-4 hover:cursor-pointer">{page - 1}</a>
     {/if}
     <a href="/?page={page}" class="bg-orange-100 font-bold rounded-lg px-4 hover:cursor-pointer">{page}</a>
-    <a href="?page={page + 1}&type={$type}" class="bg-orange-300 font-bold rounded-lg px-4 hover:cursor-pointer" on:click={()=> page = page + 1}>{page + 1}</a>
-    <a href="?page={page + 2}&type={$type}" class="bg-orange-300 font-bold rounded-lg px-4 hover:cursor-pointer">{page + 2}</a>
+    <a href="/?page={page + 1}&type={$type}" class="bg-orange-300 font-bold rounded-lg px-4 hover:cursor-pointer">{page + 1}</a>
+    <a href="/?page={page + 2}&type={$type}" class="bg-orange-300 font-bold rounded-lg px-4 hover:cursor-pointer">{page + 2}</a>
 </div>
