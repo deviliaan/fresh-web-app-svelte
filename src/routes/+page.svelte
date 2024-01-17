@@ -18,7 +18,7 @@
                 </div>
             {/if} 
             <Content animes={data.animes}/>
-            <Pgainator />
+            <Pgainator page={data.currentPage}/>
         </div>
         <div class="sm:hidden hidden md:block mt-2 mr-2">
             <RightBar />
