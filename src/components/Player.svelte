@@ -4,7 +4,7 @@
     import axios from "axios";
     import { onMount } from "svelte";
     export let episode,id;
-   
+
     $: embed = '';
     $: sources = [];
     onMount(async ()=>{

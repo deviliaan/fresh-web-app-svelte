@@ -25,8 +25,6 @@
 	"type": "module",
 	"dependencies": {
 		"@macfja/svelte-persistent-store": "^2.4.1",
-		"@vime/core": "^5.4.1",
-		"@vime/svelte": "^5.4.1",
 		"axios": "^1.6.5",
 		"svelte-lazy-image": "^0.5.1"
 	}
